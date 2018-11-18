@@ -7,7 +7,7 @@
      yum: name=httpd state=present
 
    - name: Amending webserver configuration file
-     copy: dest=/var/www/html/index.html content="My web Server with jenkins"
+     copy: dest=/var/www/html/index.html content="My web Server with jenkins and continous deployment with Autobuild"
   
    - name: Starting webserver
      service: name=httpd state=started
