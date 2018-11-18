@@ -1,0 +1,15 @@
+---
+ - name: My firts Plybook
+   hosts: syneslaveanal
+  
+   tasks:
+   - name: Package installations
+     yum: name=httpd state=present
+
+   - name: Amending webserver configuration file
+     copy: dest=/var/www/html/index.html content="My web Server"
+  
+   - name: Starting webserver
+     service: name=httpd state=started
+...
+
